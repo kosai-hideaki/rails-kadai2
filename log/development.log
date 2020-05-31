@@ -1,0 +1,2899 @@
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE DATABASE "crud_sample_development" ENCODING = 'unicode'[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "crud_sample_test" ENCODING = 'unicode'[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/bin/rake:23
+  [1m[35m (34.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/bin/rake:23
+  [1m[35m (42.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6011565497094695055)[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/bin/rake:23
+Migrating to CreateUsers (20200507135916)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/bin/rake:23
+  [1m[35m (67.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "age" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200507135916_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (3.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200507135916"]]
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (42.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-07 14:02:37.612926"], ["updated_at", "2020-05-07 14:02:37.612926"]]
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6011565497094695055)[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/bin/rake:23
+Started GET "/" for ::1 at 2020-05-07 23:21:13 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 24ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user" for ::1 at 2020-05-07 23:21:55 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/new" for ::1 at 2020-05-07 23:21:59 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 377ms (Views: 358.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/new" for ::1 at 2020-05-07 23:27:25 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 57ms (Views: 34.4ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/users" for ::1 at 2020-05-07 23:27:32 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/new" for ::1 at 2020-05-07 23:28:41 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-05-07 23:28:43 +0900
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for UsersController):
+  
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-05-07 23:37:37 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C/9+zqtPNCdYj0WCLzNP6P+R+5lpkqhzfuRjhgdauvQVr6zv6QEqj+Bs3rxdyNHqj/eXLPeO9APSzOOTtyJgVg==", "user"=>{"name"=>"こ", "age"=>""}}
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `name' for #<UsersController:0x00007fbe475717c0>):
+  
+app/controllers/users_controller.rb:15:in `user_params'
+app/controllers/users_controller.rb:9:in `create'
+Started POST "/users" for ::1 at 2020-05-07 23:38:35 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C/9+zqtPNCdYj0WCLzNP6P+R+5lpkqhzfuRjhgdauvQVr6zv6QEqj+Bs3rxdyNHqj/eXLPeO9APSzOOTtyJgVg==", "user"=>{"name"=>"こ", "age"=>"33"}}
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `name' for #<UsersController:0x00007fbe42653fa8>):
+  
+app/controllers/users_controller.rb:15:in `user_params'
+app/controllers/users_controller.rb:9:in `create'
+Started POST "/users" for ::1 at 2020-05-07 23:39:39 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C/9+zqtPNCdYj0WCLzNP6P+R+5lpkqhzfuRjhgdauvQVr6zv6QEqj+Bs3rxdyNHqj/eXLPeO9APSzOOTtyJgVg==", "user"=>{"name"=>"こ", "age"=>"33"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (46.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "こ"], ["age", 33], ["created_at", "2020-05-07 14:39:39.967678"], ["updated_at", "2020-05-07 14:39:39.967678"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 89ms (Views: 17.4ms | ActiveRecord: 55.7ms)
+
+
+Started GET "/users" for ::1 at 2020-05-07 23:39:45 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2020-05-07 23:39:51 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-05-07 23:40:01 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C/9+zqtPNCdYj0WCLzNP6P+R+5lpkqhzfuRjhgdauvQVr6zv6QEqj+Bs3rxdyNHqj/eXLPeO9APSzOOTtyJgVg==", "user"=>{"name"=>"こ", "age"=>"33"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "こ"], ["age", 33], ["created_at", "2020-05-07 14:40:01.273143"], ["updated_at", "2020-05-07 14:40:01.273143"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (41.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 89ms (Views: 40.9ms | ActiveRecord: 42.6ms)
+
+
+Started GET "/users" for ::1 at 2020-05-07 23:40:02 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2020-05-07 23:42:45 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2020-05-07 23:42:50 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2020-05-07 23:42:54 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2020-05-07 23:42:56 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2020-05-07 23:42:57 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/new" for ::1 at 2020-05-07 23:43:00 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-05-07 23:43:07 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3/dX0gtWQcszPwzdxnqkEges9dV2gGpWBM5SGwBysjTBp4XzSRhfY4vcl+O0gToQd8qZYOicNiao5tIOsApolg==", "user"=>{"name"=>"kosai", "age"=>"36"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "kosai"], ["age", 36], ["created_at", "2020-05-07 14:43:07.422739"], ["updated_at", "2020-05-07 14:43:07.422739"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 15.0ms | ActiveRecord: 41.4ms)
+
+
+Started POST "/users" for ::1 at 2020-05-07 23:50:36 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3/dX0gtWQcszPwzdxnqkEges9dV2gGpWBM5SGwBysjTBp4XzSRhfY4vcl+O0gToQd8qZYOicNiao5tIOsApolg==", "user"=>{"name"=>"isaco", "age"=>"33"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "isaco"], ["age", 33], ["created_at", "2020-05-07 14:50:36.817660"], ["updated_at", "2020-05-07 14:50:36.817660"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 37ms (Views: 16.3ms | ActiveRecord: 9.8ms)
+
+
+Started POST "/users" for ::1 at 2020-05-07 23:56:17 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3/dX0gtWQcszPwzdxnqkEges9dV2gGpWBM5SGwBysjTBp4XzSRhfY4vcl+O0gToQd8qZYOicNiao5tIOsApolg==", "user"=>{"name"=>"toyoko", "age"=>"65"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "toyoko"], ["age", 65], ["created_at", "2020-05-07 14:56:17.040244"], ["updated_at", "2020-05-07 14:56:17.040244"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 21.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users" for ::1 at 2020-05-07 23:56:17 +0900
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 46ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.4.2) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2020-05-07 23:58:05 +0900
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.4.2) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-05-08 00:07:00 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3/dX0gtWQcszPwzdxnqkEges9dV2gGpWBM5SGwBysjTBp4XzSRhfY4vcl+O0gToQd8qZYOicNiao5tIOsApolg==", "user"=>{"name"=>"toyokop", "age"=>"65"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "toyokop"], ["age", 65], ["created_at", "2020-05-07 15:07:00.444373"], ["updated_at", "2020-05-07 15:07:00.444373"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 16.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users" for ::1 at 2020-05-08 00:07:02 +0900
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.4.2) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2020-05-08 00:15:59 +0900
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.4.2) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-05-08 00:16:07 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (5.2ms)
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-05-08 00:16:15 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-05-08 00:16:21 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pfsMDizNPOyVrgkPLskr5t3650eR5DRpZdk2FN9Rzyi7q94vboMiRC1NkjFcMrXkrZyL8g/4aBnJ8bYBbykVig==", "user"=>{"name"=>"a", "age"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "a"], ["age", 1], ["created_at", "2020-05-07 15:16:22.005208"], ["updated_at", "2020-05-07 15:16:22.005208"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 64ms (Views: 16.4ms | ActiveRecord: 42.5ms)
+
+
+Started GET "/users" for ::1 at 2020-05-08 00:16:23 +0900
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 42ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.4.2) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-05-09 05:01:24 +0900
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (5.3ms)
+Completed 200 OK in 114ms (Views: 96.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-05-09 05:13:46 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 321ms (Views: 232.5ms | ActiveRecord: 61.1ms)
+
+
+Started POST "/users" for ::1 at 2020-05-09 05:14:05 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zd8NDKaP+RyORE4fpDLVCeLFfS/gyUeXUHqqtcwKiTNc8VwcExyCoOio6CQ+1jQEkU8sfLWXiIS/WcaZSztucg==", "user"=>{"name"=>"a", "age"=>"13"}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (48.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "a"], ["age", 13], ["created_at", "2020-05-08 20:14:05.267761"], ["updated_at", "2020-05-08 20:14:05.267761"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 72ms (Views: 12.6ms | ActiveRecord: 51.1ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 05:14:08 +0900
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 43ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.4.2) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-05-09 05:19:49 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zd8NDKaP+RyORE4fpDLVCeLFfS/gyUeXUHqqtcwKiTNc8VwcExyCoOio6CQ+1jQEkU8sfLWXiIS/WcaZSztucg==", "user"=>{"name"=>"b", "age"=>"15"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "b"], ["age", 15], ["created_at", "2020-05-08 20:19:49.190700"], ["updated_at", "2020-05-08 20:19:49.190700"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 11.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 05:37:16 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @user, url:"/users", html: { method: :post} do |f| %>
+    2: <p>投稿</p>
+    3: <p>お名前:<%= f.text_field :name %></P>
+    4: <p>年齢:<%= f.text_field :age %></p>
+  
+app/views/users/index.html.erb:1:in `_app_views_users_index_html_erb__1814279661455011263_14720'
+Started GET "/users" for ::1 at 2020-05-09 05:38:57 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @user, url:"/users", html: { method: :post} do |f| %>
+    2: <p>投稿</p>
+    3: <p>お名前:<%= f.text_field :name %></P>
+    4: <p>年齢:<%= f.text_field :age %></p>
+  
+app/views/users/index.html.erb:1:in `_app_views_users_index_html_erb__1814279661455011263_15240'
+Started GET "/users" for ::1 at 2020-05-09 05:40:17 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @user, url:"/users", html: { method: :post} do |f| %>
+    2: <p>投稿</p>
+    3: <p>お名前:<%= f.text_field :name %></P>
+    4: <p>年齢:<%= f.text_field :age %></p>
+  
+app/views/users/index.html.erb:1:in `_app_views_users_index_html_erb__1814279661455011263_15760'
+Started GET "/users" for ::1 at 2020-05-09 05:43:55 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @user, url:"/users", html: { method: :post} do |f| %>
+    2: <p>投稿</p>
+    3: <p>お名前:<%= f.text_field :name %></P>
+    4: <p>年齢:<%= f.text_field :age %></p>
+  
+app/views/users/index.html.erb:1:in `_app_views_users_index_html_erb__1814279661455011263_16280'
+Started GET "/users" for 127.0.0.1 at 2020-05-09 22:26:18 +0900
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @user, url:"/users", html: { method: :post} do |f| %>
+    2: <p>投稿</p>
+    3: <p>お名前:<%= f.text_field :name %></P>
+    4: <p>年齢:<%= f.text_field :age %></p>
+  
+app/views/users/index.html.erb:1:in `_app_views_users_index_html_erb___4439441645010794980_13380'
+Started GET "/user" for 127.0.0.1 at 2020-05-09 22:26:23 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2020-05-09 22:26:29 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @user, url:"/users", html: { method: :post} do |f| %>
+    2: <p>投稿</p>
+    3: <p>お名前:<%= f.text_field :name %></P>
+    4: <p>年齢:<%= f.text_field :age %></p>
+  
+app/views/users/index.html.erb:1:in `_app_views_users_index_html_erb___4439441645010794980_14540'
+Started GET "/users" for 127.0.0.1 at 2020-05-09 22:38:27 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users" for 127.0.0.1 at 2020-05-09 22:41:20 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users" for 127.0.0.1 at 2020-05-09 22:41:42 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users" for 127.0.0.1 at 2020-05-09 22:42:05 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users" for ::1 at 2020-05-09 22:59:49 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users/new" for ::1 at 2020-05-09 23:01:54 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 340ms (Views: 266.5ms | ActiveRecord: 64.6ms)
+
+
+Started POST "/users" for ::1 at 2020-05-09 23:02:05 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Bai9dDomY8Kcl8Tvw09rBTz6ERrVVxT+eYhiFueC/5Lhgq5TRffJUV55112Kl03JbcaB3CMVAnXVHkJpsdwPQ==", "user"=>{"name"=>"a", "age"=>"b"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (49.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "a"], ["age", 0], ["created_at", "2020-05-09 14:02:05.193435"], ["updated_at", "2020-05-09 14:02:05.193435"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 76ms (Views: 13.8ms | ActiveRecord: 51.9ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:02:07 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users" for ::1 at 2020-05-09 23:10:06 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users" for ::1 at 2020-05-09 23:10:08 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users/new" for ::1 at 2020-05-09 23:10:35 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-05-09 23:19:09 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pe5JXwbfbD/fz7mJTVcge4UEfMLPf1LOXh9ONtxtV78+fuETmyAqlZDEAceEcEDgtECOgdSmWpRwrRa3ITQsfA==", "user"=>{"name"=>"f", "age"=>"7"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "f"], ["age", 7], ["created_at", "2020-05-09 14:19:09.284147"], ["updated_at", "2020-05-09 14:19:09.284147"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (41.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 85ms (Views: 38.5ms | ActiveRecord: 42.4ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:19:10 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users" for ::1 at 2020-05-09 23:21:09 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users" for ::1 at 2020-05-09 23:21:41 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/views/users/index.html.erb:11: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users" for ::1 at 2020-05-09 23:22:26 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (41.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (62.8ms)
+Completed 200 OK in 101ms (Views: 57.3ms | ActiveRecord: 41.7ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:28:16 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:28:30 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 37ms (Views: 33.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:30:22 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-05-09 23:30:24 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-05-09 23:30:27 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-05-09 23:30:53 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T5oZjDmAj+4SCDxIMYWw2kMIf3gcbZjVRpahvVQC2pHUCrHApH/JRF0DhAb4otBBckyNOwe0kI9oJPk8qVuhUg==", "user"=>{"name"=>"r", "age"=>"15"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "r"], ["age", 15], ["created_at", "2020-05-09 14:30:53.880766"], ["updated_at", "2020-05-09 14:30:53.880766"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (42.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 87ms (Views: 38.3ms | ActiveRecord: 43.0ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:30:55 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:31:50 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:31:54 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:32:49 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:33:26 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:33:28 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:34:43 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:35:33 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:36:42 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:37:08 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:38:17 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:38:19 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:39:31 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:40:39 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:41:11 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:46:39 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 77ms (Views: 68.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:47:46 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:48:17 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:48:57 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:49:01 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2020-05-09 23:49:04 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-05-09 23:49:13 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y07maFGOAT6b4O1CLw49TEw3/8rgSzytdIdKfFZxoS1AWzeUGYiq1YfaqL1TF/7qdlVg4tNsSEh25kapGigPVQ==", "user"=>{"name"=>"u", "age"=>"50"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "u"], ["age", 50], ["created_at", "2020-05-09 14:49:13.331892"], ["updated_at", "2020-05-09 14:49:13.331892"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (41.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 78ms (Views: 26.4ms | ActiveRecord: 42.6ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:49:14 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:53:59 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 39ms (Views: 23.7ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:55:28 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:56:16 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:56:50 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:58:21 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-05-09 23:58:57 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/12" for ::1 at 2020-05-10 00:02:30 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/12"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/12" for ::1 at 2020-05-10 00:03:19 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/12"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/12" for ::1 at 2020-05-10 00:07:29 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/12"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/" for ::1 at 2020-05-10 00:07:35 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:7: syntax error, unexpected ':', expecting '}'
+...hod: :delete, data:　{confirm: "削除しますか?"} );@ou...
+...                              ^
+/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:7: syntax error, unexpected '}', expecting ')'
+...confirm: "削除しますか?"} );@output_buffer.safe_append...
+...                              ^
+/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:9: syntax error, unexpected `end', expecting ')'
+'.freeze; end ;
+          ^~~
+/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:11: syntax error, unexpected `ensure', expecting ')'
+          ensure
+          ^~~~~~
+/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/users/index.html.erb:7: syntax error, unexpected ':', expecting '}'
+app/views/users/index.html.erb:7: syntax error, unexpected '}', expecting ')'
+app/views/users/index.html.erb:9: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:11: syntax error, unexpected `ensure', expecting ')'
+app/views/users/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+Started GET "/users/" for ::1 at 2020-05-10 00:07:48 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:7: syntax error, unexpected ':', expecting '}'
+...hod: :delete, data:　{confirm: "削除しますか?"} );@ou...
+...                              ^
+/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:7: syntax error, unexpected '}', expecting ')'
+...confirm: "削除しますか?"} );@output_buffer.safe_append...
+...                              ^
+/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:9: syntax error, unexpected `end', expecting ')'
+'.freeze; end ;
+          ^~~
+/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:11: syntax error, unexpected `ensure', expecting ')'
+          ensure
+          ^~~~~~
+/Users/kosairie/Desktop/crud_sample/app/views/users/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/users/index.html.erb:7: syntax error, unexpected ':', expecting '}'
+app/views/users/index.html.erb:7: syntax error, unexpected '}', expecting ')'
+app/views/users/index.html.erb:9: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:11: syntax error, unexpected `ensure', expecting ')'
+app/views/users/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+Started GET "/users/" for ::1 at 2020-05-10 00:09:05 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 30ms (Views: 24.8ms | ActiveRecord: 3.7ms)
+
+
+Started DELETE "/users/1" for ::1 at 2020-05-10 00:09:09 +0900
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1464/LFEH0SeJXxFaZOXTIDO2MqI6G4KQPdVP6+qHm9MHhCwLLtZ7tEuxAugtPfXsYoqiZMxZlBuRQ2+UvNlrA==", "id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  [1m[36mUser Destroy (3.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/users_controller.rb:20
+No template found for UsersController#destroy, rendering head :no_content
+Completed 204 No Content in 283ms (ActiveRecord: 5.1ms)
+
+
+Started DELETE "/users/7" for ::1 at 2020-05-10 00:09:13 +0900
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1464/LFEH0SeJXxFaZOXTIDO2MqI6G4KQPdVP6+qHm9MHhCwLLtZ7tEuxAugtPfXsYoqiZMxZlBuRQ2+UvNlrA==", "id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  [1m[36mUser Destroy (40.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/users_controller.rb:20
+No template found for UsersController#destroy, rendering head :no_content
+Completed 204 No Content in 70ms (ActiveRecord: 41.0ms)
+
+
+Started GET "/users/" for ::1 at 2020-05-10 00:09:15 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 22ms (Views: 17.8ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/users/8" for ::1 at 2020-05-10 00:09:20 +0900
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"U1knrcQa+Jj7w6o3Js2teXLl6gaqQ/1cL20ZddYhKZPIyY/hWeW+MrTIEnnv6s3iQ6EYRbGa9QYB30H0K3hSUA==", "id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  [1m[36mUser Destroy (43.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/users_controller.rb:20
+No template found for UsersController#destroy, rendering head :no_content
+Completed 204 No Content in 71ms (ActiveRecord: 43.8ms)
+
+
+Started DELETE "/users/9" for ::1 at 2020-05-10 00:09:25 +0900
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"U1knrcQa+Jj7w6o3Js2teXLl6gaqQ/1cL20ZddYhKZPIyY/hWeW+MrTIEnnv6s3iQ6EYRbGa9QYB30H0K3hSUA==", "id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  [1m[36mUser Destroy (40.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/users_controller.rb:20
+No template found for UsersController#destroy, rendering head :no_content
+Completed 204 No Content in 68ms (ActiveRecord: 41.1ms)
+
+
+Started GET "/users/" for ::1 at 2020-05-10 00:09:26 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/10" for ::1 at 2020-05-10 00:11:22 +0900
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"z+NN2Zo1bdbsNT4f+ZPbyicsIYKva3dej939Bc28vXNUc+WVB8orfKM+hlEwtLtRFmjTwbSyfwShb6WEMOXGsA==", "id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  [1m[36mUser Destroy (41.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  ↳ app/controllers/users_controller.rb:20
+  Rendering users/destroy.html.erb within layouts/application
+  Rendered users/destroy.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 64ms (Views: 18.8ms | ActiveRecord: 41.9ms)
+
+
+Started GET "/users" for ::1 at 2020-05-10 00:11:24 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/11" for ::1 at 2020-05-10 00:11:41 +0900
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"smfdzyHb8jSY4jwGxfL2wNzYlGgBqQWbqPXjnRCenlEp93WDvCS0ntfphEgM1ZZb7ZxmKxpwDcGGR7sc7cflkg==", "id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  [1m[36mUser Destroy (41.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/users_controller.rb:20
+  Rendering users/destroy.html.erb within layouts/application
+  Rendered users/destroy.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 58ms (Views: 13.0ms | ActiveRecord: 41.7ms)
+
+
+Started GET "/users" for ::1 at 2020-05-10 00:11:45 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/12" for ::1 at 2020-05-10 00:11:48 +0900
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hVRjKjQzkhNXiI6fyLDIvqWR8kWfGm9+Yki/xEEEwpMexMtmqczUuRiDNtEBl6gllNUABoTDZyRM+udFvF25UA==", "id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  [1m[36mUser Destroy (42.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  ↳ app/controllers/users_controller.rb:20
+  Rendering users/destroy.html.erb within layouts/application
+  Rendered users/destroy.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 60ms (Views: 13.4ms | ActiveRecord: 43.0ms)
+
+
+Started GET "/users" for ::1 at 2020-05-10 00:11:49 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2/edit" for ::1 at 2020-05-10 00:22:28 +0900
+  
+SyntaxError (/Users/kosairie/Desktop/crud_sample/config/routes.rb:11: syntax error, unexpected local variable or method, expecting `end'
+  patch '/users/:id' to: 'users#update'
+                     ^~
+):
+  
+config/routes.rb:11: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/users/2/edit" for ::1 at 2020-05-10 00:22:31 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/2/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/2/edit" for ::1 at 2020-05-10 00:22:33 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/2/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/2/edit" for ::1 at 2020-05-10 00:22:34 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/2/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/2/edit" for ::1 at 2020-05-10 00:27:56 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/2/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/2/edit" for ::1 at 2020-05-10 00:27:59 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/2/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/2/edit" for ::1 at 2020-05-10 00:33:34 +0900
+  
+SyntaxError (/Users/kosairie/Desktop/crud_sample/config/routes.rb:11: syntax error, unexpected local variable or method, expecting `end'
+  patch '/users/:id' to: 'users#update'
+                     ^~
+):
+  
+config/routes.rb:11: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/users/2/edit" for ::1 at 2020-05-10 01:03:37 +0900
+  
+SyntaxError (/Users/kosairie/Desktop/crud_sample/config/routes.rb:11: syntax error, unexpected local variable or method, expecting `end'
+  patch '/users/:id' to: 'users#update'
+                     ^~
+):
+  
+config/routes.rb:11: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/users/2/edit" for ::1 at 2020-05-10 01:03:39 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/2/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/2/edit" for ::1 at 2020-05-10 01:03:41 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/2/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/2/edit" for ::1 at 2020-05-10 01:04:33 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/2/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/2/edit" for ::1 at 2020-05-10 01:08:41 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/2/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/2/edit" for ::1 at 2020-05-10 01:10:36 +0900
+  
+SyntaxError (/Users/kosairie/Desktop/crud_sample/app/controllers/users_controller.rb:35: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/users_controller.rb:35: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users/2/edit" for ::1 at 2020-05-10 01:11:56 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 65ms (Views: 43.2ms | ActiveRecord: 7.9ms)
+
+
+Started PATCH "/users/2" for ::1 at 2020-05-10 01:12:01 +0900
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+4ewlHRtEiKRo2l7vErkXcx7xTI9LxGyTQyIy1R66DpgFxjY6ZJUiN6o0TV1bYTG/T83cSb2GehjvtBKqSOT+Q==", "user"=>{"name"=>"こ", "age"=>"33"}, "id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:23
+  Rendering users/update.html.erb within layouts/application
+  Rendered users/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 15.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for ::1 at 2020-05-10 01:12:02 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 22ms (Views: 18.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/3/edit" for ::1 at 2020-05-10 01:12:05 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"authenticity_token"=>"lFTQeXhvvk+e3vr3zKDzHs5SxdbdaLXPpFEAjjs8xgAPxHg15ZD45dHVQrkFh5OF/xY3lcaxvZWK41gPxmW9ww==", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/3" for ::1 at 2020-05-10 01:12:09 +0900
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C7H2lgVuQaL2hMREMWdfEzLGLzBvT6SYguHVXHCBScOQIV7amJEHCLmPfAr4QD+IA4Ldc3SWrMKsU43djdgyAA==", "user"=>{"name"=>"kosa", "age"=>"36"}, "id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Update (43.5ms)[0m  [1m[33mUPDATE "users" SET "name" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["name", "kosa"], ["updated_at", "2020-05-09 16:12:09.687779"], ["id", 3]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:23
+  Rendering users/update.html.erb within layouts/application
+  Rendered users/update.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 70ms (Views: 16.2ms | ActiveRecord: 46.1ms)
+
+
+Started GET "/users" for ::1 at 2020-05-10 01:12:11 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/3" for ::1 at 2020-05-10 17:46:36 +0900
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jAARrzQoA+na2VbOaIiZ1uJMsIC2HVKqNGeoWCVmMnUXkLnjqddFQ5XS7oChr/lN0whCw63EWvAa1fDZ2D9Jtg==", "id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/users_controller.rb:28
+  [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/destroy.html.erb within layouts/application
+  Rendered users/destroy.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 153ms (Views: 77.1ms | ActiveRecord: 42.0ms)
+
+
+Started GET "/users" for ::1 at 2020-05-10 17:46:38 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 30ms (Views: 26.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/2" for ::1 at 2020-05-10 17:46:41 +0900
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7H6XGhZAnmke+vIwI4emlKdBKiStd+Web8ulFggG6ul37j9Wi7/Yw1HxSn7qoMYPlgXYZ7au7cRBef2X9V+RKg==", "id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/users_controller.rb:28
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/destroy.html.erb within layouts/application
+  Rendered users/destroy.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 68ms (Views: 19.8ms | ActiveRecord: 42.0ms)
+
+
+Started GET "/users" for ::1 at 2020-05-10 17:46:45 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/new" for ::1 at 2020-05-10 17:46:49 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-05-10 17:46:53 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 33ms (Views: 29.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for ::1 at 2020-05-10 17:47:03 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ic6kOu4PuKSQ61Me1xRvE7l1gOYBtLL2sJ4eyH3pJLkC23XGpgkTT4zRFuGrDay1gxcfzjKTxhOy/xIdMbCKwQ==", "user"=>{"name"=>"kokai", "age"=>"35"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "kokai"], ["age", 35], ["created_at", "2020-05-10 08:47:03.027531"], ["updated_at", "2020-05-10 08:47:03.027531"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (80.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 116ms (Views: 24.7ms | ActiveRecord: 83.2ms)
+
+
+Started GET "/users" for ::1 at 2020-05-10 17:47:05 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-05-17 23:23:27 +0900
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (6.8ms)
+Completed 200 OK in 33ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for ::1 at 2020-05-17 23:23:37 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user" for ::1 at 2020-05-17 23:23:44 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2020-05-17 23:23:52 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (25.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (55.6ms)
+Completed 200 OK in 361ms (Views: 306.3ms | ActiveRecord: 42.9ms)
+
+
+Started DELETE "/users/4" for ::1 at 2020-05-17 23:23:58 +0900
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"39eUR46AE0KqKcN0YjXpr5CQAlZY8j0AwcZ9DudM+HdFgINvesEGv7YLKOV44WEAdija+zjHBL73zD/+uyoTnA==", "id"=>"4"}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/users_controller.rb:28
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/destroy.html.erb within layouts/application
+  Rendered users/destroy.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 49ms (Views: 19.3ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/users" for ::1 at 2020-05-17 23:24:02 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-05-17 23:57:15 +0900
+  [1m[35m (8.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (4.7ms)
+Completed 200 OK in 26ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-05-17 23:57:21 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 243ms (Views: 232.0ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-18 00:13:28 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 262ms (Views: 246.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-18 00:15:58 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 40ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-18 00:24:47 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 49ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-18 00:26:00 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-05-18 00:26:07 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kYnmL46/8Y5U4bPw9juosb2JLzUcLkavfCZ+V5WCuTkL3vEHev7kc0jDWGHs7yAeWzH3mHwbfxFKLDynyeRS0g==", "user"=>{"name"=>"a", "age"=>"3"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (32.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "a"], ["age", 3], ["created_at", "2020-05-17 15:26:07.214477"], ["updated_at", "2020-05-17 15:26:07.214477"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 63ms (Views: 19.8ms | ActiveRecord: 34.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-18 00:26:09 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-18 00:26:10 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-18 00:28:56 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-18 00:28:59 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-18 00:29:46 +0900
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 267ms (Views: 242.5ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-05-18 00:30:38 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aibYhZCu5yLsH5A+h6kFSwV/5bnOdX6vniVOzekSiwzwcc+tZO/y3/A9e6+dfY3k48c9FK5ARxGoLww9tXRg5w==", "user"=>{"name"=>"a", "age"=>"5"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "a"], ["age", 5], ["created_at", "2020-05-17 15:30:38.444612"], ["updated_at", "2020-05-17 15:30:38.444612"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 27ms (Views: 14.6ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-18 00:30:39 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2020-05-18 00:30:41 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"authenticity_token"=>"1MwT+x+fl8aKQIFQbFfy4D4dGaZJfxyS+LgeNsVoVWBOmwTT696CO5ZiasF2g3pP2KXBCylKJSzOslzGmQ6+iw==", "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 38ms (Views: 30.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-18 00:31:21 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/5" for 127.0.0.1 at 2020-05-18 00:32:41 +0900
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EceYrRxTZzeZ/nWam+rj1PWwr8Wd+5bq1eGU1TnSZIaLkI+F6BJyyoXcnguBPmt7Ewh3aP3Or1Tj69YlZbSPbQ==", "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/users_controller.rb:28
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/destroy.html.erb within layouts/application
+  Rendered users/destroy.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 46ms (Views: 32.8ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-18 00:32:42 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/14" for 127.0.0.1 at 2020-05-18 00:32:44 +0900
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"j64EOYOvtSPvBx8Td7Ayf444U1ojFbAAz4tAl+9tX88V+RMRd+6g3vMl9IJtZLrQaICL90Mgib75gQJnswu0JA==", "id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 14]]
+  ↳ app/controllers/users_controller.rb:28
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/destroy.html.erb within layouts/application
+  Rendered users/destroy.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 17.9ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-18 00:32:51 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/13" for 127.0.0.1 at 2020-05-18 00:32:53 +0900
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"f0bhnK80sM2bfwOS+SYrisRk42FRk/FYydLQgUCYY0vlEfa0W3WlMIdd6APj8qMlItw7zDGmyOb/2JJxHP6IoA==", "id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 13]]
+  ↳ app/controllers/users_controller.rb:28
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/destroy.html.erb within layouts/application
+  Rendered users/destroy.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 24.0ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-18 00:32:56 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/6/edit" for 127.0.0.1 at 2020-05-18 00:33:09 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"authenticity_token"=>"u1HMV58k4fEO3nd138xDw/PR4+50bYoY54oxeR2s+tghBtt/a2X0DBL8nOTFGMtsFWk7QxRYs6bRgHOJQcoRMw==", "id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/6" for 127.0.0.1 at 2020-05-18 00:33:10 +0900
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JV6GmLJH/CO+haNukXnSB8sCCxK8B7khQIsSElJhxve/CZGwRgbp3qKnSP+LrVqoLbrTv9wygJ92gVDiDgctHA==", "user"=>{"name"=>"toyokop", "age"=>"65"}, "id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:23
+  Rendering users/update.html.erb within layouts/application
+  Rendered users/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-18 00:33:11 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-05-31 10:15:49 +0900
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kosairie/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (4.0ms)
+Completed 200 OK in 18ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-05-31 10:15:56 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (25.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (61.6ms)
+Completed 200 OK in 369ms (Views: 311.5ms | ActiveRecord: 48.3ms)
+
+
+Started GET "/users/new" for ::1 at 2020-05-31 10:15:58 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 46ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-05-31 10:16:05 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rfvIpu1A/TO+kC5hirF5+n0XfTwpZ2Xj+Q4J+StK6HsYjzJzGKKE3iG2q55Ru2VOYxKxfpxJaemHROFFtwrxug==", "user"=>{"name"=>"ko", "age"=>"47"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (22.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ko"], ["age", 47], ["created_at", "2020-05-31 01:16:05.967194"], ["updated_at", "2020-05-31 01:16:05.967194"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 17.0ms | ActiveRecord: 25.4ms)
+
+
+Started GET "/users" for ::1 at 2020-05-31 10:16:07 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/22/edit" for ::1 at 2020-05-31 10:16:20 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"authenticity_token"=>"+o6hTnKpzR/UoiiL5aan7BGmzdjvVWFD6qNgR9KGJpLQ8aHJmjAnLjxBAyfgUo8Ly/IENkHl7bINovR/3y8+Bw==", "id"=>"22"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 36ms (Views: 17.3ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/users/22" for ::1 at 2020-05-31 10:16:22 +0900
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q58k5S/IEjoS+gohPw+ZUxG+kIbcX9VvxAdMBuhQb05p4CRix1H4C/oZIY06+7G0y+pZaHLvWZ4jBtg+5fl32w==", "user"=>{"name"=>"a", "age"=>"38"}, "id"=>"22"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:24
+  Rendering users/update.html.erb within layouts/application
+  Rendered users/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 12.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2020-05-31 10:16:23 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.6ms)
+
+
